@@ -1,0 +1,19 @@
+package dashboard
+
+func userEmail(ctx context.Context) string {
+    email, ok := ctx.Value("email").(string)
+    if !ok {
+        return ""
+    }
+    return email
+}
+
+
+
+templ Index() {
+    if len(testValue(ctx)) > 0 {   
+        <h1>Dashboard page {testValue(ctx)}</h1>
+    } else {
+        <h1>help</h1>
+    }
+}
