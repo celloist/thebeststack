@@ -11,6 +11,7 @@ func main() {
 	app := slick.New()
 
 	app.Plug(withRequestID, WithAuth)
+
 	app.Get("/profile", handler.HandleUserProfile)
 	app.Get("/dashboard", handler.HandleDashboard)
 
